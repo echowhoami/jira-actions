@@ -31,11 +31,6 @@ jobs:
           description: |
             Github Link: ${{ github.event.issue.html_url }}
             ${{ github.event.issue.body }}
-          # Parent and Epic Link fields (set to same)
-          fields: '{
-            "parent": {"key": "LIBRARIES-2048"},
-            "customfield_10002": "LIBRARIES-2048"
-            }'
 
       - name: Log created issue
         run: echo "Issue ${{ steps.create.outputs.issue }} was created"
